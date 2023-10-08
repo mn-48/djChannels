@@ -8,3 +8,6 @@ chat server--|
              |--> room view
 
 
+### Enable a channel layer
+- A channel is a mailbox where messages can be sent to
+- A group is a group of related channels.
