@@ -17,6 +17,9 @@ chat server--|
 ### Consumer is User in async
 ### routing.py is urls.py
 ### as_asgi() is as_view
+### scope is request
+
+
 
 
 ```
