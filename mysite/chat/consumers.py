@@ -115,7 +115,7 @@ class MyConsumer(WebsocketConsumer):
 ''' 
 
 
-# AsyncWebsocketConsumer
+# AsyncWebsocketConsumer ==================================================================
 from channels.generic.websocket import AsyncWebsocketConsumer
 
 class MyConsumer(AsyncWebsocketConsumer):
@@ -146,3 +146,7 @@ class MyConsumer(AsyncWebsocketConsumer):
     async def disconnect(self, close_code):
         # Called when the socket closes
         pass
+
+
+# JsonWebsocketConsumer =========================================================
+# AsyncJsonWebsocketConsumer ==================================================
