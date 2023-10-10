@@ -34,3 +34,41 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
         # Send message to WebSocket
         await self.send(text_data=json.dumps({"message": message}))
+
+
+
+
+'''
+
+# SyncConsumer ============================================================
+from channels.consumer import SyncConsumer
+class EchoConsumer(SyncConsumer):
+    def websocket_connect(self, event):
+        self.send({
+            "type": "websocket.accept",
+        })
+
+    def websocket_send(self, event):
+        self.send({
+            "type": "websocket.send",
+            "text": event["text"],
+        })
+
+   
+
+# AsyncConsumer =============================================================
+from channels.consumer import AsyncConsumer
+class EchoConsumer(AsyncConsumer):
+
+    async def websocket_connect(self, event):
+        await self.send({
+            "type": "websocket.accept",
+        })
+
+    async def websocket_send(self, event):
+        await self.send({
+            "type": "websocket.send",
+            "text": event["text"],
+        })
+
+'''  
