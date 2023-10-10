@@ -112,7 +112,7 @@ class MyConsumer(WebsocketConsumer):
         # Called when the socket closes
         pass
 
-''' 
+
 
 
 # AsyncWebsocketConsumer ==================================================================
@@ -150,3 +150,15 @@ class MyConsumer(AsyncWebsocketConsumer):
 
 # JsonWebsocketConsumer =========================================================
 # AsyncJsonWebsocketConsumer ==================================================
+''' 
+
+
+# AsyncHttpConsumer ================================================
+from channels.generic.http import AsyncHttpConsumer
+
+class BasicHttpConsumer(AsyncHttpConsumer):
+    async def handle(self, body):
+        await asyncio.sleep(10)
+        await self.send_response(200, b"Your response bytes", headers=[
+            (b"Content-Type", b"text/plain"),
+        ])
