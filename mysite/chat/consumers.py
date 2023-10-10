@@ -114,8 +114,8 @@ class MyConsumer(WebsocketConsumer):
 
 ''' 
 
-# AsyncWebsocketConsumer
 
+# AsyncWebsocketConsumer
 from channels.generic.websocket import AsyncWebsocketConsumer
 
 class MyConsumer(AsyncWebsocketConsumer):
