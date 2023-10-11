@@ -197,3 +197,9 @@ class ServerSentEventsConsumer(AsyncHttpConsumer):
             payload = "data: %s\n\n" % datetime.now().isoformat()
             await self.send_body(payload.encode("utf-8"), more_body=True)
             await asyncio.sleep(1)
+
+class AdminChatConsumer(AsyncHttpConsumer):
+    pass
+
+class PublicChatConsumer(AsyncHttpConsumer):
+    pass
