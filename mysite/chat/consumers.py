@@ -14,9 +14,12 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
         await self.accept()
 
+        # Clients.objects.create(channel_name=self.channel_name)
+
     async def disconnect(self, close_code):
         # Leave room group
         await self.channel_layer.group_discard(self.room_group_name, self.channel_name)
+        # Clients.objects.filter(channel_name=self.channel_name).delete()
 
     # Receive message from WebSocket
     async def receive(self, text_data):
@@ -197,6 +200,7 @@ class ServerSentEventsConsumer(AsyncHttpConsumer):
             payload = "data: %s\n\n" % datetime.now().isoformat()
             await self.send_body(payload.encode("utf-8"), more_body=True)
             await asyncio.sleep(1)
+
 
 class AdminChatConsumer(AsyncHttpConsumer):
     pass
