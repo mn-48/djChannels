@@ -91,28 +91,28 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 
 
 
-from django.urls import re_path
+# from django.urls import re_path
 
-from channels.routing import ProtocolTypeRouter, URLRouter
-from channels.auth import AuthMiddlewareStack
-from channels.security.websocket import AllowedHostsOriginValidator
+# from channels.routing import ProtocolTypeRouter, URLRouter
+# from channels.auth import AuthMiddlewareStack
+# from channels.security.websocket import AllowedHostsOriginValidator
 
-from myapp import consumers
+# from myapp import consumers
 
-application = ProtocolTypeRouter({
+# application = ProtocolTypeRouter({
 
-    "websocket": AllowedHostsOriginValidator(
-        #  AuthMiddlewareStack = AuthMiddleware + AuthMiddleware + CookieMiddleware
-        AuthMiddlewareStack(
-            URLRouter([
-                re_path(r"^front(end)/$", consumers.AsyncChatConsumer.as_asgi()),
-            ])
-        )
-    ),
+#     "websocket": AllowedHostsOriginValidator(
+#         #  AuthMiddlewareStack = AuthMiddleware + AuthMiddleware + CookieMiddleware
+#         AuthMiddlewareStack(
+#             URLRouter([
+#                 re_path(r"^front(end)/$", consumers.AsyncChatConsumer.as_asgi()),
+#             ])
+#         )
+#     ),
 
-})
+# })
 
-'''
+
 
 import os
 
@@ -140,6 +140,6 @@ application = ProtocolTypeRouter(
     }
 )
 
-'''
+
 
 
