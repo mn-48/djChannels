@@ -22,6 +22,8 @@ function onlineUsersSelectorRemove(value) {
     if (oldOption !== null) oldOption.remove();
 }
 
+// 
+
 // focus 'chatMessageInput' when user opens the page
 chatMessageInput.focus();
 

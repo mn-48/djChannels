@@ -10,6 +10,8 @@ class ChatConsumer(WebsocketConsumer):
 
     def __init__(self, *args, **kwargs):
         super().__init__(args, kwargs)
+        # print()
+        # print("constructor called")
         self.room_name = None
         self.room_group_name = None
         self.room = None
@@ -22,6 +24,9 @@ class ChatConsumer(WebsocketConsumer):
         self.room = Room.objects.get(name=self.room_name)
         self.user = self.scope['user']
         self.user_inbox = f'inbox_{self.user.username}'
+
+        print("self.room_name=====================", self.room_name)
+        print()
 
         # connection has to be accepted
         self.accept()
@@ -99,6 +104,7 @@ class ChatConsumer(WebsocketConsumer):
                 }
             )
             # send private message delivered to the user
+
             self.send(json.dumps({
                 'type': 'private_message_delivered',
                 'target': target,
@@ -107,6 +113,8 @@ class ChatConsumer(WebsocketConsumer):
             return
 
         # send chat message event to the room
+        # print(event)
+        print("Clicked me!!!!!!!!!!!!")
         async_to_sync(self.channel_layer.group_send)(
             self.room_group_name,
             {
@@ -118,12 +126,14 @@ class ChatConsumer(WebsocketConsumer):
         Message.objects.create(user=self.user, room=self.room, content=message)
 
     def chat_message(self, event):
+        # print('text_data=json.dumps(event): --> ', json.dumps(event))
         self.send(text_data=json.dumps(event))
 
     def user_join(self, event):
         self.send(text_data=json.dumps(event))
 
     def user_leave(self, event):
+        # print('text_data=json.dumps(event): --> ',json.dumps(event))
         self.send(text_data=json.dumps(event))
 
     def private_message(self, event):
