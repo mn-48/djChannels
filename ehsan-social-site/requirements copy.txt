@@ -1,0 +1,17 @@
+# it will install all latest versions of that packages.
+
+python-decouple
+dj-database-url
+autopep8 
+django-seed
+django 
+djangorestframework
+django-cors-headers
+Pillow  
+django-extensions
+django-on-heroku 
+gunicorn 
+dj_database_url
+channels
+channels_redis
+djangorestframework-simplejwt

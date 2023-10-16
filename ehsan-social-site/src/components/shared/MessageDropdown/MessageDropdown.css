@@ -1,0 +1,148 @@
+.custom-dropdown-message {
+}
+
+.custom-dropdown-message .dropdown-menu {
+  width: 343px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+  top: 50px;
+  padding: 0;
+  left: -133px;
+}
+
+
+
+.message-inner-dropdown .message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.message-inner-dropdown .message-header h1 {
+  font-weight: 100;
+  margin: 0;
+  padding: 3px 0;
+  font-size: 1.75em;
+}
+.message-inner-dropdown .message-header .action-buttons {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-inner-dropdown .message-header .action-buttons > span {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 500ms;
+}
+
+.message-inner-dropdown .message-header .action-buttons > span:hover {
+  color: var(--ehsan-maroon-color);
+}
+
+.message-inner-dropdown .message-header .action-buttons > span > svg {
+  font-size: 16px;
+}
+.message-inner-dropdown .message-search {
+  padding: 5px 10px;
+}
+.message-inner-dropdown .message-search input[type="text"] {
+  border-radius: 30px;
+  background-color: var(--ehsan-ash-color);
+  border: none;
+  padding: 5px 10px;
+  width: 100%;
+  transition: 500ms;
+  border: 1px solid transparent;
+}
+
+.message-inner-dropdown .message-search input[type="text"]:hover {
+  border: 1px solid var(--ehsan-ash-color);
+  background: transparent;
+}
+
+.message-inner-dropdown .message-search input[type="text"]:focus {
+  outline: 0;
+  background: transparent;
+  border: 1px solid var(--ehsan-ash-color);
+}
+
+/* Message Body */
+.message-body {
+  height: 380px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.custom-dropdown-message .bottom-area {
+  text-align: center;
+}
+.custom-dropdown-message .bottom-area a {
+  text-decoration: none;
+  color: var(---ehsan-deep-ash-color);
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 10px 0;
+  display: block;
+  border-top: 1px solid var(--ehsan-ash-color);
+  transition: 500ms;
+}
+.custom-dropdown-message .bottom-area a:hover {
+  color: var(--ehsan-color);
+}
+.custom-dropdown-message .bottom-area a svg {
+  margin: 0 10px;
+}
+
+/* Scrollbar Design */
+/* width */
+.message-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.message-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+.message-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.message-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* message-main-options Start */
+.message-main-options {
+  width: 320px;
+  border: 1px solid rgb(243, 243, 243);
+  padding: 5px;
+  margin: 5px 0;
+}
+.message-main-options > h3 {
+  font-weight: 600;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.message-main-options > h3 svg {
+  margin-right: 5px;
+}
+.message-main-options > p {
+  color: var(--ehsan-deep-ash-color);
+  border-bottom: 1px solid var(--ehsan-ash-color);
+  padding-bottom: 5px;
+  font-size: 0.9em;
+}

@@ -1,0 +1,32 @@
+.frequently-message-profile{
+    width:300px;
+    display:block;
+    color:var(--ehsan-deep-ash-color);
+    text-decoration: none;
+}
+.frequently-message-profile:hover{
+    color:var(--ehsan-deep-ash-color);
+}
+
+.frequently-message-profile .content>h3 {
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.tippy-profile{
+    
+}
+.tippy-profile p{
+    display:flex;
+    align-items:center;
+    margin:0 0 5px;
+    font-size: 13px;
+}
+.tippy-profile p svg{
+    font-size: 18px;
+}
+.tippy-profile p span{
+    width: 30px;
+    display:block;
+    text-align:center;
+}

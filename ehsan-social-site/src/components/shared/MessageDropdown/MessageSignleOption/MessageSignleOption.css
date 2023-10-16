@@ -1,0 +1,26 @@
+/* single-message-option  */
+.single-message-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  text-decoration: none;
+  color: black;
+  border-radius: 7px;
+  transition: 500ms;
+}
+
+.single-message-option:hover {
+  background-color: var(--ehsan-ash-color);
+  color: black;
+}
+
+.single-message-option div span {
+  width: 20px;
+  display: inline-block;
+}
+
+.single-message-option div span svg {
+  width: 20px;
+}

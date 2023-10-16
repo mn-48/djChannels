@@ -1,0 +1,78 @@
+.special-notification-card {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  transition: 400ms;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.special-notification-card:hover {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.special-notification-card:hover .card {
+  box-shadow: none;
+}
+
+.special-notification-card .card {
+  border: none;
+  transition: 800ms;
+}
+
+.special-notification-card .card-body {
+  padding: 5px;
+  border: none;
+}
+.special-notification-card .card-header1 {
+  display: flex;
+  justify-content: space-between;
+}
+.special-notification-card .card-header1 p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.special-notification-card .card-header1 > span {
+  padding: 2px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  vertical-align: middle;
+}
+.special-notification-card .card-header1 > span > svg {
+  color: var(--ehsan-ash-color);
+  transition: 300ms;
+}
+.special-notification-card .card-header1 > span:hover svg {
+  color: var(--ehsan-deep-ash-color);
+}
+
+.special-notification-card .card-header1 p svg {
+  color: var(--ehsan-maroon-color);
+  font-size: 1.1em;
+  transition: 300ms;
+}
+
+.special-notification-card:hover .card-header1 p svg {
+  transform: scale(1.2);
+}
+
+.special-notification-card .card-header1 p strong {
+  margin: 0 0 0 5px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.special-notification-card .card-text {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: var(--ehsan-deep-ash-color);
+  display: flex;
+  align-items: center;
+}
+.special-notification-card strong {
+  margin-right: 2px;
+}
+.special-notification-card .card-text > svg {
+  margin: 5px;
+}

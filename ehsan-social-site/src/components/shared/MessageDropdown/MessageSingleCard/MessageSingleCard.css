@@ -1,0 +1,130 @@
+.singleMessageCard {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  width: 99%;
+  border-radius: 10px;
+  margin: auto;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.singleMessageCard:hover {
+  background-color: var(--ehsan-ash-color);
+}
+
+.singleMessageCard .custom-avatar {
+}
+
+.singleMessageCard .content {
+  text-align: left;
+  vertical-align: middle;
+  padding: 0 5px;
+  position: relative;
+}
+
+.singleMessageCard .content h3 {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.singleMessageCard .content h3 span {
+  background-color: var(--ehsan-background);
+  color: black;
+  margin-left: 5px;
+}
+
+.singleMessageCard .content > p {
+  font-size: 0.8em;
+  line-height: 1.3em;
+  color: var(--ehsan-deep-ash-color);
+  margin: 0;
+  padding: 0;
+}
+
+.singleMessageCard .content .action-btn {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 50%;
+  display: block;
+  border: 1px solid white;
+  transition: 300ms;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  z-index: 999999;
+}
+
+.singleMessageCard:hover .content .action-btn {
+  transform: scale(1);
+}
+
+.singleMessageCard .content .action-btn svg {
+  font-size: 1.15em;
+}
+
+.active-inactive {
+  position: absolute;
+  right: 6px;
+  font-size: 10px;
+  top: 9px;
+}
+
+.active-inactive .active {
+  color: var(--ehsan-color);
+  animation: 1.75s blinking infinite;
+  transform: scale(1);
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #009cfd;
+}
+
+@keyframes blinking {
+  50% {
+    transform: scale(0.8);
+    box-shadow: 0px 0px 0px #009cfd;
+  }
+}
+
+.active-inactive .inactive {
+  color: var(--ehsan-deep-ash-color);
+}
+
+.active-inactive svg {
+}
+
+.message-options p svg {
+  margin-right: 8px;
+  width: 18px !important;
+}
+
+.message-options {
+  width: 200px;
+  padding: 0;
+}
+
+.message-options > p {
+  font-size: 14px !important;
+  margin-bottom: 1px;
+  padding: 5px;
+  transition: 500ms;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.message-options > p:hover {
+  background-color: var(--ehsan-ash-color);
+}
+
+.message-options p svg {
+  margin-right: 8px;
+  transition: 300ms;
+}
+.message-options p:hover svg {
+  transform: scale(1.25);
+}

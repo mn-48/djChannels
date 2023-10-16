@@ -1,0 +1,120 @@
+.singleNotificationCard {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  width: 99%;
+  border-radius: 3px;
+  margin: auto;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.singleNotificationCard:hover {
+  background-color: var(--ehsan-ash-color);
+}
+
+.singleNotificationCard .custom-avatar {
+}
+
+.singleNotificationCard .content {
+  text-align: left;
+  vertical-align: middle;
+  padding: 0 0 0 10px;
+  position: relative;
+}
+
+.singleNotificationCard .content h3 {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.singleNotificationCard .content h3 span {
+  background-color: var(--ehsan-background);
+  color: black;
+  margin-left: 5px;
+}
+
+.singleNotificationCard .content > p {
+  font-size: 0.8em;
+  line-height: 1.3em;
+  color: var(--ehsan-deep-ash-color);
+  margin: 0;
+  padding: 0;
+}
+
+.ago {
+  color: var(--ehsan-color);
+  display: block;
+  font-weight: 600;
+}
+
+.singleNotificationCard .content .action-btn {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 50%;
+  display: block;
+  border: 1px solid white;
+  transition: 300ms;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  z-index: 999999;
+}
+
+.singleNotificationCard:hover .content .action-btn {
+  transform: scale(1);
+}
+
+.singleNotificationCard .content .action-btn svg {
+  font-size: 1.15em;
+}
+
+.notification-options p svg {
+  margin-right: 8px;
+  width: 18px !important;
+}
+
+.notification-options {
+  width: 200px;
+  padding: 0;
+}
+
+.notification-options > p {
+  font-size: 14px !important;
+  margin-bottom: 1px;
+  padding: 5px;
+  transition: 500ms;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.notification-options > p:hover {
+  background-color: var(--ehsan-ash-color);
+}
+
+.notification-options p svg {
+  margin-right: 8px;
+  transition: 300ms;
+}
+.notification-options p:hover svg {
+  transform: scale(1.25);
+}
+
+.single-notification-image-controller {
+  position: relative;
+}
+.single-notification-image-controller > img {
+  position: absolute;
+  top: 30px;
+  left: 31px;
+  width: 25px !important;
+  box-shadow: -3px -3px 6px rgb(254 254 254 / 57%);
+  height: 25px;
+}

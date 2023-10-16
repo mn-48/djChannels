@@ -1,0 +1,139 @@
+.loginArea,
+.loginArea .container,
+.loginArea .row {
+  height: 100vh;
+}
+
+.loginArea {
+  background-image: url("../../images/social-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loginArea .row {
+  align-items: center;
+}
+
+.loginArea .greetings h1 {
+  color: var(--ehsan-color);
+  font-weight: bold;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.loginArea .greetings h1 svg {
+  color: rgb(107, 107, 107);
+  margin-right: 20px;
+}
+
+.loginArea .greetings h1 span {
+  display: block;
+}
+
+.loginArea .greetings h1 small {
+  font-size: 0.4em;
+  display: block;
+  letter-spacing: 1.01em;
+  margin-left: 4px;
+  color: var(--ehsan-maroon-color);
+  font-weight: 300;
+}
+
+.loginArea a {
+  display: block;
+  text-align: center;
+  color: var(--ehsan-maroon-color);
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+/* Login Form */
+.loginArea .loginForm .form-group {
+  margin: 30px 0;
+}
+
+.loginArea .loginForm h2 {
+  color: var(--ehsan-color);
+}
+
+.loginArea .loginForm .form-group input[type="text"],
+.loginArea .loginForm .form-group input[type="password"] {
+  padding: 15px;
+}
+
+.loginArea .loginForm button {
+  background-color: var(--ehsan-color);
+  color: white;
+  padding: 15px 10px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.loginArea .loginForm button:hover {
+  background-color: var(--ehsan-ash-color);
+  color: black;
+}
+
+.loginArea .loginForm button svg {
+  margin-right: 10px;
+}
+
+/* Responsive Website  */
+@media (max-width: 575.98px) {
+  .loginArea,
+  .loginArea .container,
+  .loginArea .row {
+    height: auto !important;
+  }
+  .loginArea {
+    background-image: none;
+    background-color: white;
+    padding: 20px 0 0;
+  }
+  .loginArea .row {
+    display: block !important;
+  }
+  .loginArea .greetings h1 {
+    font-size: 28px;
+    text-align: center;
+    display: block;
+  }
+
+  .loginArea .greetings p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  /* Login Form */
+
+  .loginArea .loginForm {
+    margin: 0;
+    box-shadow: none !important;
+  }
+
+  .loginArea .loginForm .form-group {
+    margin: 20px 0;
+  }
+  .loginArea .loginForm h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.25em;
+  }
+
+  .loginArea .loginForm .form-group input[type="text"],
+  .loginArea .loginForm .form-group input[type="password"] {
+    padding: 8px;
+  }
+
+  .loginArea .loginForm button {
+    padding: 10px;
+    font-size: 1em;
+  }
+}
+
+
+.loading-icon-color{
+  color: var(--ehsan-color);
+}

@@ -1,0 +1,33 @@
+.form-field-group-title {
+  font-weight: 400;
+  font-size: 1em;
+  display: flex;
+  justify-items: center;
+  margin: 0;
+  text-transform: capitalize;
+  color: var(--ehsan-color);
+}
+
+.multi-step-form-label-name{
+    font-size: 0.9em;
+    text-transform: capitalize;
+}
+
+.form-next-step-button{
+    text-transform: uppercase;
+    background-color: var(--ehsan-color);
+}
+
+.form-prev-step-button{
+    text-transform: uppercase;
+    background-color: var(--ehsan-maroon-color);
+}
+
+.required-icon-color {
+    color: var(--ehsan-maroon-color);
+    margin-left: 5px;
+}
+
+.form-input-placeholder-text-size{
+    font-size: 12px;
+}

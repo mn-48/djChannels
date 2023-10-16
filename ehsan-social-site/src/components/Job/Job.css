@@ -1,0 +1,72 @@
+.checkbox-container {
+  height: 200px;
+  overflow: auto;
+  /* border: 1px solid #bdbdbd; */
+  padding: 10px 15px;
+}
+.fontSize {
+  font-size: 12px;
+}
+.collapseBtn-effect:hover {
+  color: #009cfd;
+}
+/* .navName:hover{
+    background-color:#009CFD;
+    color: white;
+} */
+.navIcon {
+  display: block;
+  margin: 0 auto 0 auto;
+  font-size: 22px;
+}
+.educationBtn {
+  color: #009cfd;
+  border: 2px solid #009cfd;
+}
+.educationBtn:hover {
+  color: white;
+  background-color: #009cfd;
+}
+/* .boxBorder{
+    border: 2px solid #009CFD;
+    border-radius: 5px;
+    margin: 0 16px;
+    padding: 16px 0;
+} */
+.editForm {
+  border: none;
+  display: block;
+  margin: 4px 0 4px 0;
+  color: rgb(97, 97, 97);
+  width: 100%;
+}
+.editForm:focus-visible,
+.editForm:focus,
+.editForm:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.chekcedItemsShow {
+  background: rgb(207, 207, 207);
+  padding: 3px 8px;
+  margin: 4px 3px;
+  width: 100%;
+}
+.pdfDeco {
+  height: 13em;
+}
+#lblHover:hover {
+  cursor: pointer;
+}
+.textareaDeco {
+  resize: none;
+  height: relative;
+}
+.ehsanBtn {
+  background: #279cfb;
+  color: white;
+}
+.ehsanBtn:hover {
+  color: rgb(236, 234, 234);
+}

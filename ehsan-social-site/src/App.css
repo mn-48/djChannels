@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color:#eee;
+  --ehsan-color: #009cfd;
+  --ehsan-secondary-color: rgb(255, 136, 0);
+  --ehsan-ash-color: #eee;
+  --ehsan-deep-ash-color: #6e6e6e;
+  --ehsan-maroon-color: #ef3b7d;
+  --ehsan-background: #e6ecf0;
+  --ehsan-avatar-md: 75px;
+  --ehsan-avatar-sm: 50px;
+  --ehsan-avatar-xs: 35px;
+  --ehsan-icon-left: 25px;
+}
+
+
+ul,ol{
+  margin:0;
+  padding:0;
+}
+
+ul li, ol li{
+  margin:0;
+  padding:0;
+  list-style: none;
+  transition:300ms;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  font-weight: 300;
+}
+
+a,a:hover{
+  text-decoration: none;
+  transition:300ms;
+}
+
+.min-height-100{
+  min-height: 100vh;
+}
+
+.view-all-notification-btn {
+  color: var(--ehsan-color);
+  text-decoration: none;
+  transition: 500ms;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: inline-block;
+  border: 1px solid var(--ehsan-ash-color);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.view-all-notification-btn:hover {
+  border: 1px solid var(--ehsan-color);
+}
+
+.false-space {
+  height: 53px;
+}
+
+.custom-avatar {
+  width: var(--ehsan-avatar-xs);
+  height: var(--ehsan-avatar-xs);
+  overflow: hidden;
+  border-radius: 300px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-avatar-sm {
+  height: var(--ehsan-avatar-sm);
+  width: var(--ehsan-avatar-sm);
+  overflow: hidden;
+  border-radius: 300px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-avatar img,
+.custom-avatar-sm img {
+  width: 130%;
+}
+
+.custom-icon {
+  width: var(--ehsan-avatar-xs);
+  height: var(--ehsan-avatar-xs);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+#basic-nav-dropdown::after,
+#basic-nav-dropdown2::after,
+#basic-nav-dropdown3::after {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+  position: absolute;
+  right: 0;
+}
+
+/* Spin anything */
+.spinner {
+  animation: spin infinite 5s linear;
+  /* linear means it will spin smoothly without stopping or slowing down */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slide switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 24px;
+  width: 24px;
+  left: 5px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

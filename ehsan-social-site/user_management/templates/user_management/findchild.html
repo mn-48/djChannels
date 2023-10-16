@@ -1,0 +1,90 @@
+{% extends 'backend/base.html' %}
+{% block title %}
+    View Child
+{% endblock  %}
+
+{% block content %}
+{% load static %}
+
+<style>
+
+    .fs16{font-size:16px;}
+    .c-b{color:blue;}
+    .fw{width:100%;}
+    .fl{float:left;}
+    .mt38{margin-top:38px;}
+    .b-b{border:1px solid #000;}
+    .p10{padding:10px;}
+    .m0{margin:0px;}
+    .tcap{text-transform:uppercase;}
+    .dn{display:none;}
+    .mb15{margin-bottom:15px;}
+    .tc{text-align:center;}
+    .fs20{font-size:20px;}
+    .c-w{color:#fff !important;}
+</style>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+<div class="card mt38">
+
+    <div class="card-header">
+        <div class="fw fl  p10 ">
+            <form action="" method="post" id="search_consumer_child" novalidate>
+
+                <div class="alert alert-danger form_msg dn">
+                    <p class="m0 tcap">Please enter a CIN</p>
+                </div>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-3 mb15 col-md-offset-3">
+                        <label >CIN</label>
+                        <input type="text"  class="form-control"  id="id_cin" >
+                    </div>
+
+                    <div class="col-md-3 mb15">
+                        <label class="c-w">Shift</label><br>
+                         <input type="submit" class="btn btn-info" value="Search" >
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="card-body">
+
+
+        <div class="fw fl tc">
+            <div class="table-responsive" id="child_holder">
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock  %}
+
+
+

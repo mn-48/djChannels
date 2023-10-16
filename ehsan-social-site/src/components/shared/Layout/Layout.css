@@ -1,0 +1,170 @@
+.layout h1 {
+  font-size: 1.65em;
+}
+
+.layout h2 {
+  font-size: 1.40em;
+}
+
+/* Left Layout Area */
+.left-layout-area,
+.right-layout-area {
+  padding-top: 30px;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color:white;
+}
+
+.middle-layout-area {
+  background-color: var(--ehsan-ash-color);
+  overflow-y: scroll;
+  height:100vh;
+}
+
+/* Right Layout start */
+.right-layout-area {
+  overflow-y: scroll;
+}
+
+.right-notification-box {
+  margin-bottom: 20px;
+}
+
+.right-notification-headline-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-notification-headline {
+  font-weight: 400;
+  font-size: 1em;
+  display: flex;
+  justify-items: center;
+  margin: 0;
+}
+
+.right-notification-headline svg {
+  color: var(--ehsan-deep-ash-color);
+  margin-right: 5px;
+}
+/* Right Layout Ends */
+
+.left-layout-area,
+.middle-layout-area,
+.right-layout-area {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.left-layout-area::-webkit-scrollbar,
+.middle-layout-area::-webkit-scrollbar,
+.right-layout-area::-webkit-scrollbar {
+  display: none; /* Hide Scrollbar from chrome */
+}
+
+/* Home Left Side Design */
+.left-layout-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: 1000ms !important;
+  cursor: pointer;
+  padding: 5px 3px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.left-layout-card:hover {
+  background-color: var(--ehsan-ash-color);
+}
+
+.left-layout-card:hover .custom-icon {
+  transform: scale(1.25);
+}
+
+.custom-icon img {
+  width: var(--ehsan-icon-left);
+}
+
+.left-layout-card .content {
+  color: black;
+  margin-left: 10px;
+}
+
+.left-layout-card .content h3 {
+  font-size: 15px;
+  margin: 0;
+  line-height: 16px;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.left-layout-card .content h3 span {
+  color: var(--ehsan-deep-ash-color);
+  font-size: 0.8em;
+}
+
+.left-layout-card .content p {
+  margin: 0;
+  font-size: 0.75em;
+  color: var(--ehsan-color);
+}
+
+.left-layout-area h2 {
+  font-size: 1.3em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-top: 1px solid var(--ehsan-deep-ash-color);
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.left-layout-area h2 > span {
+  margin-right: 10px;
+}
+
+/* Middle Area Design */
+.create-post-box {
+  background: white;
+}
+
+.custom-avatar-md {
+  width: var(--ehsan-avatar-md);
+  height: var(--ehsan-avatar-md);
+  overflow: hidden;
+  border-radius: 300px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-avatar-md img {
+  width: 140%;
+}
+
+
+.create-post-box .inner-box .post-top {
+  display: flex;
+  align-items: center;
+}
+
+.create-post-box .post-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-post-box .post-bottom .left span {
+  background-color: var(--ehsan-deep-ash-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.create-post-box .post-bottom .left span:hover {
+  background-color: var(--ehsan-maroon-color);
+}

@@ -1,0 +1,103 @@
+/* main container  */
+.icon-drop-down {
+  width: 350px;
+  background-color: white;
+  transition: border 2s ease-in-out;
+}
+
+/* every item  */
+.icon-drop-down > div {
+  padding: 4.5px 0px;
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+  transition: background-color 0.5s ease-out;
+}
+
+.icon-drop-down > div:hover {
+  background-color: var(--ehsan-ash-color);
+}
+
+/* left icon  */
+.icon-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-left img {
+  width: 20px;
+  height: 20px;
+}
+
+/* right icon  */
+.icon-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: var(--ehsan-deep-ash-color);
+  transition: color 0.5s ease-in-out;
+}
+
+/* nested content title right svg icon  */
+.svg-icon svg{
+  width: 20px;
+  height: 20px;
+  fill: var(--ehsan-color);
+  stroke: var(--ehsan-color)
+}
+
+.icon-drop-down > div:hover .icon-right {
+  color: var(--ehsan-color);
+}
+
+.content-title {
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.content-message {
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+}
+
+/* ehsan marketing  */
+.ehsan-marketing{
+  background-color: transparent !important;
+  color: black !important;
+  text-decoration: none;
+}
+
+/* logout  */
+.logout {
+  background-color: transparent !important;
+  color: black !important;
+}
+
+/* nested section style  */
+.nested-content-title-container {
+  background-color: var(--ehsan-ash-color) !important;
+}
+.nested-content-title {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.nested-title-left-icon {
+  font-size: 18px;
+  font-weight: 100;
+  color: var(--ehsan-maroon-color);
+}
+
+.nested-custom-tippy-content-item {
+  background-color: transparent !important;
+}
+
+.nested-custom-tippy-content-item:hover {
+  background-color: var(--ehsan-ash-color) !important;
+}

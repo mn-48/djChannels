@@ -1,0 +1,115 @@
+{% extends 'basic.html' %}
+{% block css %}
+<style>
+#chat::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#chat {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+</style>
+{% endblock css %}
+{% block body %}
+{% load static %}
+<script src="{% static 'vue1/vue.js' %}"></script>
+
+<div id="app">
+<div class="container">
+<div class="row">
+  <div class="col-md-3 text-white fixed">
+
+  With:{{roomname}} {{ roomname|json_script:"room-name" }}
+  {% if user.is_authenticated %} 
+  <h5 class="text-white">Available Groups for {{user.username}}</h5>
+    {% for group in groups %}
+      <h6 class="text-white"><a href="/chat/groupchat/{{group.group_name}}/">{{group.group_name_to_show}}</a></h6>
+    {% endfor %}
+    <h5 class="text-white">Available rooms for {{user.username}}</h5>
+    {% for us in users %}
+      <h6 class="text-white"><a href="/chat/chatwith/{{us.username}}/">{{us.username}}</a></h6>
+    {% endfor %}
+{% endif %}
+  </div>
+  <div class="col-md-6">
+  <div id="chat" style="height: 75vh; line-height:10px; overflow-y:scroll; padding-bottom:20px;padding-top:10px;">
+  
+    <div v-for="m in messages">
+    <p class="text-right text-success" v-if="m.user.username == user1"> [[m.msg]] : [[m.user.username]]</p>
+    <p class="text-left text-primary" v-else > [[m.user.username]] : [[m.msg]]</p>
+    </div>
+  </div>
+         <form @submit.prevent="sendMessage('hello')">
+                <div class="form-group">
+                  <input type="text" class="form-control"
+                    name="msg" v-model="msg" required />
+                </div>
+                <button type="submit" class="btn btn-primary d-block ml-auto">Send</button>
+          </form>
+    </div> 
+  </div>
+
+</div>
+
+</div>
+{% endblock body %}
+
+{% block js %}
+<script>
+  var app = new Vue({
+    el: '#app',
+    delimiters: ['[[', ']]'],
+    
+    data() {
+      return {
+        msg:"",
+        messages:[],
+        user1:'{{usr.username}}',
+        userid: [{{usr.id}}],
+      }
+    },
+    mounted: function(){
+      console.log('mounted');
+      setInterval(this.updateScroll(),1000);
+      
+    },
+    calculated: function(){
+      console.log(this.messages);
+      
+    },
+    methods:{
+      sendMessage: function(message) {
+        var data = { 'msg': this.msg};
+        this.connection.send(JSON.stringify(data));
+        this.msg="";
+      },
+      updateScroll: function(){
+        var objDiv = document.getElementById("chat");
+        objDiv.scrollTop = objDiv.scrollHeight;
+      }
+
+    },
+    created: function() {
+      var that=this;
+      const roomName = JSON.parse(document.getElementById('room-name').textContent);
+      this.connection = new WebSocket('ws://'+ window.location.host + '/ws/chat/'+ roomName + '/')
+      this.connection.onopen = function(event) {
+      console.log(event);
+      console.log("Successfully connected to the echo websocket server...")
+    }
+    this.connection.onmessage = function(event) {
+      data=JSON.parse(event.data);
+      data.forEach(function(i){
+          that.messages.push(i);
+      })
+      var objDiv = document.getElementById("chat");
+      objDiv.scrollTop = objDiv.scrollHeight - objDiv.clientHeight;
+    }
+    
+  },
+  })
+
+</script>
+{% endblock  %}

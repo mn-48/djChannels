@@ -1,0 +1,165 @@
+.desktopNavbar {
+  padding: 0 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.custom-nav-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.custom-nav-left .brand {
+  color: var(--ehsan-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 27px;
+}
+
+.custom-nav-left .brand small {
+  color: var(--ehsan-maroon-color);
+  font-weight: 200;
+}
+
+.custom-nav-center {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  align-items: center;
+}
+
+.custom-nav-center a {
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+  display: block;
+  padding: 10px;
+}
+
+.custom-nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.custom-nav-right > div:nth-child(1) .nav-link,
+.custom-nav-right > div:nth-child(2) > .nav-link {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.custom-nav-right > div > a > span {
+  margin: 0 0 0 10px;
+  position: relative;
+  color: black;
+}
+
+.custom-nav-right > div > a > span > span {
+  background-color: var(--ehsan-color);
+  padding: 3px;
+  font-weight: 700;
+  color: white;
+  font-size: 0.75em;
+  border-radius: 70px;
+  position: relative;
+  top: -14px;
+  left: -11px;
+}
+
+.custom-nav-right > div > a > span:nth-child(1) > span {
+  top: -15px;
+}
+
+.custom-nav-right > div > a > span > svg {
+  font-size: 21px;
+}
+.custom-nav-right > div > a > span > img {
+  height: 25px;
+}
+
+.custom-nav-item img {
+  width: 25px;
+  height: 25px;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.custom-nav-item:hover img {
+  transform: scale(1.2);
+}
+
+.custom-dropdown > a {
+  color: #000;
+  font-weight: normal;
+}
+.custom-dropdown .dropdown-menu {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  left:-273px;
+}
+
+.custom-dropdown .dropdown-menu a {
+  color: var(--ehsan-deep-ash-color);
+  font-weight: 300;
+}
+
+.custom-dropdown .dropdown-menu a svg {
+  margin-right: 10px;
+}
+
+.custom-dropdown .dropdown-menu a:last-child {
+  background-color: var(--ehsan-background);
+}
+
+/* Search related codings */
+.search-icon svg {
+  color: var(--ehsan-maroon-color);
+  font-size: 27px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.search-icon:hover svg {
+  color: var(--ehsan-color);
+}
+
+.header-search-box {
+  transition: 400ms;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-search-box input[type="text"] {
+  width: 100%;
+  border-radius: 30px;
+  padding: 10px;
+  border: 1px solid rgb(179, 179, 179);
+}
+
+.header-search-box input[type="text"]:focus {
+  border: none;
+  outline: none;
+}
+
+.header-search-box svg {
+  position: absolute;
+  right: 16px;
+  z-index: 999999 !important;
+  cursor: pointer;
+  color: var(--ehsan-ash-color);
+  font-size: 27px;
+  transition: 300ms;
+}
+
+.header-search-box svg:hover {
+  color: red;
+}
+
+.header-search-box-hide {
+  width: 0px !important;
+}

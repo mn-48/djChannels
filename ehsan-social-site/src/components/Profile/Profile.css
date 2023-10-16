@@ -1,0 +1,97 @@
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-image-container {
+  width: 100%;
+  height: 300px;
+}
+
+.about {
+  margin: 60px 0px;
+}
+
+.about-hero-area {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 10px;
+}
+
+.about-hero-area > img {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+.about-menu {
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid lightgray;
+}
+
+.about-menu > div {
+  margin: 0px 10px;
+}
+
+.about-sidebar {
+  padding: 10px;
+  border-right: 2px solid lightgray;
+}
+.item:hover {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.about-main {
+  padding: 10px 20px;
+}
+
+.center-content > p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.user-profile-content-title {
+  color: var(--ehsan-color);
+  border-bottom: 1px solid lightgray;
+}
+.user-profile-content-title-button {
+  background-color: var(--ehsan-maroon-color);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  font-size: 14px;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.user-profile-add-to-story-button {
+  background-color: var(--ehsan-color);
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.user-profile-add-to-story-button:hover {
+  background-color: var(--ehsan-color);
+  color: black;
+}
+
+.user-profile-content-title-button:hover {
+  background-color: var(--ehsan-color);
+  color: black;
+}
+
+.user-profile-content-title-icon {
+  margin-top: -6px;
+  color: black;
+}

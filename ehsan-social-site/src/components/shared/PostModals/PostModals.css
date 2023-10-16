@@ -1,0 +1,138 @@
+/* Common Modal Styles */
+.post-modal-area {
+}
+.post-modal-area .modal-header,
+.post-modal-area .modal-footer {
+  padding: 0.5rem 1rem;
+}
+
+.create-new-post-modal-header-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.create-new-post-modal-header-left .custom-avater {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 300px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-new-post-modal-header-left .custom-avater img {
+  width: 130%;
+}
+
+.create-new-post-modal-header-left .inner-text {
+  padding-left: 10px;
+}
+.create-new-post-modal-header-left .inner-text h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+.create-new-post-modal-header-left .inner-text p {
+  margin: 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+.create-new-post-modal-header-left .inner-text p svg {
+  display: inline-block;
+  margin-left: 3px;
+  color: var(--ehsan-deep-ash-color);
+}
+
+.create-new-post-modal-header-right,
+.create-new-post-modal-footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.create-new-post-modal-header-right .settings {
+  background-color: var(--ehsan-background);
+  padding: 5px;
+  border-radius: 5px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.create-new-post-modal-header-right .settings:hover {
+  background-color: var(--ehsan-deep-ash-color);
+}
+
+.create-new-post-modal-header-right .settings img {
+  height: 30px;
+  transition: ease-out 500ms;
+}
+
+.create-new-post-modal-header-right .settings:hover img {
+  filter: invert(1);
+}
+
+.create-new-post-modal-header-right .close-icon {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+}
+.create-new-post-modal-header-right .close-icon img {
+  height: 20px;
+  transition: 500ms;
+}
+.create-new-post-modal-header-right .close-icon:hover img {
+  transform: rotate(90deg);
+}
+
+.post-modal-area .modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.create-new-post-modal-footer-left .icon-div {
+  margin: 0 20px 0 0 !important;
+  cursor: pointer;
+}
+.create-new-post-modal-footer-right button {
+  margin: 3px;
+}
+
+.post-category-area {
+}
+.post-category-area h5 {
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--ehsan-ash-color);
+}
+.post-category-area ul li {
+}
+.post-category-area ul li svg {
+  color: var(--ehsan-color);
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.post-privacy-item {
+  justify-content: space-between;
+  cursor: pointer;
+}
+.post-privacy-item .form-check {
+  margin-left: 5px;
+}
+.post-privacy-item label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  min-width: 90%;
+}
+.post-privacy-item .content span {
+  color: var(--ehsan-deep-ash-color);
+}
+
+.post-privacy-custom-icon {
+}
+
+.post-privacy-custom-icon svg {
+  font-size: 18px;
+}
+/* General Post Modals */
