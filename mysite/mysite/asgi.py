@@ -30,8 +30,7 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 # )
 
 
-
-#========================================================================
+# ========================================================================
 
 
 # =============================================================
@@ -68,8 +67,6 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 # })
 
 
-
-
 # from channels.routing import ProtocolTypeRouter, URLRouter
 # from channels.security.websocket import AllowedHostsOriginValidator
 # from channels.sessions import SessionMiddlewareStack
@@ -88,7 +85,6 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 #     ),
 
 # })
-
 
 
 # from django.urls import re_path
@@ -113,7 +109,7 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 # })
 
 
-
+import chat.routing
 import os
 
 from channels.auth import AuthMiddlewareStack
@@ -129,7 +125,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 # is populated before importing code that may import ORM models.
 django_asgi_app = get_asgi_application()
 
-import chat.routing
 
 application = ProtocolTypeRouter(
     {
@@ -139,7 +134,3 @@ application = ProtocolTypeRouter(
         ),
     }
 )
-
-
-
-

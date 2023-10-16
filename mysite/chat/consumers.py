@@ -1,4 +1,6 @@
 # chat/consumers.py
+from datetime import datetime
+from channels.generic.http import AsyncHttpConsumer
 import json
 
 from channels.generic.websocket import AsyncWebsocketConsumer
@@ -35,11 +37,12 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
     # Receive message from room group
     async def chat_message(self, event):
-        print("User/Consumer send: ", self.scope["user"] )
+        print("User/Consumer send: ", self.scope["user"])
         message = event["message"]
 
         # Send message to WebSocket
         await self.send(text_data=json.dumps({"message": message}))
+
 
 '''
 
@@ -153,11 +156,11 @@ class MyConsumer(AsyncWebsocketConsumer):
 
 # JsonWebsocketConsumer =========================================================
 # AsyncJsonWebsocketConsumer ==================================================
-''' 
+'''
 
 
 # AsyncHttpConsumer ================================================
-from channels.generic.http import AsyncHttpConsumer
+
 
 class BasicHttpConsumer(AsyncHttpConsumer):
     async def handle(self, body):
@@ -166,9 +169,6 @@ class BasicHttpConsumer(AsyncHttpConsumer):
             (b"Content-Type", b"text/plain"),
         ])
 
-    
-import json
-from channels.generic.http import AsyncHttpConsumer
 
 class LongPollConsumer(AsyncHttpConsumer):
     async def handle(self, body):
@@ -185,10 +185,6 @@ class LongPollConsumer(AsyncHttpConsumer):
         await self.send_body(json.dumps(event).encode("utf-8"))
 
 
-
-from datetime import datetime
-from channels.generic.http import AsyncHttpConsumer
-
 class ServerSentEventsConsumer(AsyncHttpConsumer):
     async def handle(self, body):
         await self.send_headers(headers=[
@@ -204,6 +200,7 @@ class ServerSentEventsConsumer(AsyncHttpConsumer):
 
 class AdminChatConsumer(AsyncHttpConsumer):
     pass
+
 
 class PublicChatConsumer(AsyncHttpConsumer):
     pass
