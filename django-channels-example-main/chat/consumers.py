@@ -10,6 +10,8 @@ class ChatConsumer(WebsocketConsumer):
 
     def __init__(self, *args, **kwargs):
         super().__init__(args, kwargs)
+        # print("Yes-------------------")
+        # print()
         self.room_name = None
         self.room_group_name = None
         self.room = None
@@ -120,9 +122,11 @@ class ChatConsumer(WebsocketConsumer):
         Message.objects.create(user=self.user, room=self.room, content=message)
 
     def chat_message(self, event):
+        # print("json.dumps(event): ", json.dumps(event))
         self.send(text_data=json.dumps(event))
 
     def user_join(self, event):
+        print("json.dumps(event): ", json.dumps(event))
         self.send(text_data=json.dumps(event))
 
     def user_leave(self, event):
