@@ -10,13 +10,14 @@ class ChatConsumer(WebsocketConsumer):
 
     def __init__(self, *args, **kwargs):
         super().__init__(args, kwargs)
-        # print("Yes-------------------")
+        print("Yes-------------------")
         # print()
         self.room_name = None
         self.room_group_name = None
         self.room = None
         self.user = None
         self.user_inbox = None
+        self.pm_reciver = None
 
     def connect(self):
         self.room_name = self.scope['url_route']['kwargs']['room_name']
@@ -24,6 +25,7 @@ class ChatConsumer(WebsocketConsumer):
         self.room = Room.objects.get(name=self.room_name)
         
         self.user = self.scope['user']
+        # print("user_id :", self.user.id)
         self.user_inbox = f'inbox_{self.user.username}'
 
         # connection has to be accepted
@@ -58,6 +60,7 @@ class ChatConsumer(WebsocketConsumer):
             )
             self.room.online.add(self.user)
 
+
     def disconnect(self, close_code):
         async_to_sync(self.channel_layer.group_discard)(
             self.room_group_name,
@@ -70,6 +73,10 @@ class ChatConsumer(WebsocketConsumer):
                 self.user_inbox,
                 self.channel_name,
             )
+            # async_to_sync(self.channel_layer.group_discard)(  # me modified
+            #     self.user_inbox,
+            #     self.channel_name,
+            # )
 
             # send the leave event to the room
             async_to_sync(self.channel_layer.group_send)(
@@ -91,6 +98,11 @@ class ChatConsumer(WebsocketConsumer):
             split = message.split(' ', 2)
             target = split[1]
             target_msg = split[2]
+
+            print("sender: ", self.user)
+            print("receiver: ", target)
+            self.pm_reciver = self.room.online.all().get(username=target)
+            print("self.pm_reciver, ", self.pm_reciver )
 
             # send private message to the target
             async_to_sync(self.channel_layer.group_send)(
